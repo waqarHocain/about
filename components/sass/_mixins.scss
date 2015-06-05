@@ -1,0 +1,9 @@
+@mixin font-size($sizeValue: 20) {
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue/16) + rem;
+}
+
+@mixin toRem($prop, $val) {
+	$prop: $val + px;
+	$prop: ($val/16) + rem
+}

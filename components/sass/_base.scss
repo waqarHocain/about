@@ -1,0 +1,102 @@
+// Font(ing) & some Color(ing) -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_<
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size: 100%;
+}
+body {
+	@include font-size(20);
+	font-family: $f-primary;
+	line-height: 1.4;
+	background-color: $c-bg;
+	color: $c-dark;
+}
+
+#{headings()} {
+	font-family: $f-primary;
+	font-weight: $f-bold;
+	color: $c-darkest;
+	line-height: 1.4;
+}
+h1 {
+	@include font-size(56);
+	@media screen and (max-width: $l-tablet) {
+		@include font-size(48);
+	}
+}
+h2 {
+	@include font-size(42);
+	@media screen and (max-width: $l-tablet) {
+		@include font-size(36);
+	}
+}
+h3 {
+	@include font-size(36);
+	@media screen and (max-width: $l-tablet) {
+		@include font-size(30);
+	}
+}
+h4 {
+	@include font-size(30);
+	@media screen and (max-width: $l-tablet) {
+		@include font-size(26);
+	}
+}
+h5, h6 {
+	@include font-size(26);
+}
+
+h1 a, h2 a, h3 a, h5 a, h6 a {
+	color: inherit;
+	font-weight: inherit;
+	text-decoration: none;
+}
+
+a {
+	color: $c-links;
+	text-decoration: none;
+	transition: color 0.2s ease;
+	
+	&:hover, &:focus {
+		color: darken($c-links, 10);
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+button {
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	background-color: $c-btn;
+	color: $c-white;
+	transition: background-color 0.3s, color 0.6s;
+
+	&:hover, &:focus {
+		background-color: darken($c-btn, 20);
+	}
+}
+
+
+// Base Clases  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_<
+.container {
+	@extend %group;
+	margin: 0 auto;
+	@include toRem(max-width, 960);
+	max-width: 1200px;
+	padding: 0 0.625rem;
+} // container
+
+%group:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+section, footer {
+	padding: 5em 0;
+}
