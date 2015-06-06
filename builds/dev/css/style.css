@@ -159,30 +159,25 @@ h5, h6 {
 }
 
 /* line 50, ../../../components/sass/_base.scss */
-h1 a, h2 a, h3 a, h5 a, h6 a {
-  color: inherit;
-  font-weight: inherit;
-  text-decoration: none;
-}
-
-/* line 56, ../../../components/sass/_base.scss */
 a {
-  color: #439fe0;
+  color: #9e9ea6;
   text-decoration: none;
-  transition: color 0.2s ease;
+  border-bottom: 2px solid #9e9ea6;
+  transition: all 0.2s ease;
 }
-/* line 61, ../../../components/sass/_base.scss */
+/* line 56, ../../../components/sass/_base.scss */
 a:hover, a:focus {
-  color: #2287ce;
+  background-color: #fff;
+  color: #439fe0;
 }
 
-/* line 66, ../../../components/sass/_base.scss */
+/* line 62, ../../../components/sass/_base.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 71, ../../../components/sass/_base.scss */
+/* line 67, ../../../components/sass/_base.scss */
 button {
   border: none;
   border-radius: 5px;
@@ -191,9 +186,14 @@ button {
   color: #fff;
   transition: background-color 0.3s, color 0.6s;
 }
-/* line 79, ../../../components/sass/_base.scss */
+/* line 75, ../../../components/sass/_base.scss */
 button:hover, button:focus {
   background-color: #1b6aa2;
+}
+/* line 78, ../../../components/sass/_base.scss */
+button:visited {
+  color: #439fe0;
+  border-bottom: none;
 }
 
 /* line 86, ../../../components/sass/_base.scss */
@@ -204,15 +204,10 @@ button:hover, button:focus {
 }
 
 /* line 94, ../../../components/sass/_base.scss */
-.container:after, nav ul:after {
+.container:after, nav ul:after, .intro ul:after {
   content: "";
   display: block;
   clear: both;
-}
-
-/* line 100, ../../../components/sass/_base.scss */
-section, footer {
-  padding: 5em 0;
 }
 
 /* line 1, ../../../components/sass/modules/_header.scss */
@@ -237,12 +232,13 @@ nav ul li:last-child a {
 /* line 18, ../../../components/sass/modules/_header.scss */
 nav ul li a {
   color: #9e9ea6;
+  border: none;
   font-size: 16px;
   font-size: 1rem;
   margin-right: 1.875rem;
   position: relative;
 }
-/* line 24, ../../../components/sass/modules/_header.scss */
+/* line 25, ../../../components/sass/modules/_header.scss */
 nav ul li a:before {
   content: "";
   position: absolute;
@@ -256,7 +252,7 @@ nav ul li a:before {
   transform: scaleX(0.1);
   transition: opacity, transform 0.3s;
 }
-/* line 38, ../../../components/sass/modules/_header.scss */
+/* line 39, ../../../components/sass/modules/_header.scss */
 nav ul li a:hover:before, nav ul li a:focus:before {
   transform: scaleX(1);
   opacity: 1;
@@ -268,7 +264,7 @@ nav ul li a:hover:before, nav ul li a:focus:before {
     max-width: 100%;
     margin-top: 10px;
   }
-  /* line 51, ../../../components/sass/modules/_header.scss */
+  /* line 52, ../../../components/sass/modules/_header.scss */
   nav ul li {
     float: none;
     display: inline-block;
@@ -279,58 +275,30 @@ nav ul li a:hover:before, nav ul li a:focus:before {
 .intro {
   background-color: #f9f9f9;
   position: relative;
-  min-height: 550px;
+  min-height: 400px;
   height: 80vh;
 }
 /* line 9, ../../../components/sass/modules/_intro.scss */
-.intro h3 {
-  font-weight: 400;
-  text-align: center;
+.intro section {
   position: absolute;
   top: 50%;
   margin-top: -1.4em;
+  left: 50%;
+  margin-left: -25%;
 }
-/* line 16, ../../../components/sass/modules/_intro.scss */
-.intro h3 a {
-  color: #9e9ea6;
-}
-
-/* line 1, ../../../components/sass/modules/_work.scss */
-.work {
+/* line 17, ../../../components/sass/modules/_intro.scss */
+.intro h3 {
+  font-weight: 400;
   text-align: center;
 }
-
-/* line 4, ../../../components/sass/modules/_work.scss */
-.work-item {
-  display: inline-block;
-  background-color: #f5f5f5;
+/* line 22, ../../../components/sass/modules/_intro.scss */
+.intro ul {
+  display: table;
   text-align: center;
-  padding-top: 10px;
-  width: 35%;
-  max-width: 410px;
-  box-shadow: 4px 3px 5px rgba(0, 0, 0, 0.37);
-  margin: 0 6%;
+  margin: 10px auto 0;
 }
-@media screen and (max-width: 768px) {
-  /* line 4, ../../../components/sass/modules/_work.scss */
-  .work-item {
-    width: 80%;
-    margin: 20px 0 0 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  /* line 4, ../../../components/sass/modules/_work.scss */
-  .work-item {
-    width: 100%;
-    margin: 20px 0 0 0;
-  }
-}
-/* line 25, ../../../components/sass/modules/_work.scss */
-.work-item h3 {
-  color: #9e9ea6;
-}
-
-/* line 1, ../../../components/sass/modules/_footer.scss */
-footer {
-  background-color: #f5f5f5;
+/* line 28, ../../../components/sass/modules/_intro.scss */
+.intro ul li {
+  display: table-cell;
+  margin: 0 15%;
 }

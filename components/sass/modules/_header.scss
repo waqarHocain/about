@@ -17,6 +17,7 @@ nav {
 
 			a {
 				color: $c-gray;
+				border: none;
 				@include font-size(16);
 				margin-right: 1.875rem;
 				position: relative;
