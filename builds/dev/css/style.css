@@ -204,7 +204,7 @@ button:visited {
 }
 
 /* line 94, ../../../components/sass/_base.scss */
-.container:after, nav ul:after, .intro ul:after {
+.container:after, nav ul:after {
   content: "";
   display: block;
   clear: both;
@@ -276,29 +276,50 @@ nav ul li a:hover:before, nav ul li a:focus:before {
   background-color: #f9f9f9;
   position: relative;
   min-height: 400px;
-  height: 80vh;
+  height: 89.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  	/*section {
+  		position: absolute;
+  		top: 50%;
+  		margin-top: -1.4em;
+  		left: 50%;
+  		margin-left: -50%;
+  
+  		@media screen and (max-width: $l-tablet) {
+  			margin-left: -50%
+  		}*/
 }
-/* line 9, ../../../components/sass/modules/_intro.scss */
-.intro section {
-  position: absolute;
-  top: 50%;
-  margin-top: -1.4em;
-  left: 50%;
-  margin-left: -25%;
-}
-/* line 17, ../../../components/sass/modules/_intro.scss */
+/* line 22, ../../../components/sass/modules/_intro.scss */
 .intro h3 {
   font-weight: 400;
   text-align: center;
 }
-/* line 22, ../../../components/sass/modules/_intro.scss */
-.intro ul {
+
+/* line 28, ../../../components/sass/modules/_intro.scss */
+.social {
   display: table;
   text-align: center;
-  margin: 10px auto 0;
+  margin: 30px auto 0;
 }
-/* line 28, ../../../components/sass/modules/_intro.scss */
-.intro ul li {
+/* line 33, ../../../components/sass/modules/_intro.scss */
+.social li {
   display: table-cell;
-  margin: 0 15%;
+  padding: 20px;
+}
+/* line 37, ../../../components/sass/modules/_intro.scss */
+.social li a {
+  border-bottom: none;
+}
+
+/* line 43, ../../../components/sass/modules/_intro.scss */
+.icon {
+  width: 26px;
+  height: 28px;
+}
+
+/* line 48, ../../../components/sass/modules/_intro.scss */
+svg:hover g path {
+  fill: #439fe0;
 }

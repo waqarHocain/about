@@ -1,33 +1,50 @@
 .intro {
 	background-color: $c-lGray;
-
 	position: relative;
-
 	min-height: 400px;
-	height: 80vh;
+	height: 89.5vh;
 
-	section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	/*section {
 		position: absolute;
 		top: 50%;
 		margin-top: -1.4em;
 		left: 50%;
-		margin-left: -25%;
-	}
+		margin-left: -50%;
+
+		@media screen and (max-width: $l-tablet) {
+			margin-left: -50%
+		}*/
 
 	h3 {
 		font-weight: $f-normal;
 		text-align: center;
 	}
+}  // intro
 
-	ul {
-		@extend %group;
-		display: table;
-		text-align: center;
-		margin: 10px auto 0;
+.social {
+	display: table;
+	text-align: center;
+	margin: 30px auto 0;
 
-		li {
-			display: table-cell;
-			margin: 0 15%;
+	li {
+		display: table-cell;
+		padding: 20px;
+
+		a {
+			border-bottom: none;
 		}
-	}
+	} // li
+}
+
+.icon {
+	width: 26px;
+	height: 28px;
+}
+
+svg:hover g path {
+	fill: $c-blue;
 }
