@@ -204,7 +204,12 @@ button:visited {
   padding: 0 0.625rem;
 }
 
-/* line 95, ../../../components/sass/_base.scss */
+/* line 94, ../../../components/sass/_base.scss */
+header > .container, footer > .container {
+  max-width: 1440px;
+}
+
+/* line 98, ../../../components/sass/_base.scss */
 .container:after, nav ul:after {
   content: "";
   display: block;
@@ -277,60 +282,73 @@ nav ul li a:hover:before, nav ul li a:focus:before {
   background-color: #f9f9f9;
   position: relative;
   min-height: 400px;
-  height: 89.5vh;
+  height: 82vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  	/*section {
-  		position: absolute;
-  		top: 50%;
-  		margin-top: -1.4em;
-  		left: 50%;
-  		margin-left: -50%;
-  
-  		@media screen and (max-width: $l-tablet) {
-  			margin-left: -50%
-  		}*/
 }
-/* line 22, ../../../components/sass/modules/_intro.scss */
+@media screen and (max-width: 481px) {
+  /* line 1, ../../../components/sass/modules/_intro.scss */
+  .intro {
+    height: auto;
+  }
+}
+/* line 15, ../../../components/sass/modules/_intro.scss */
 .intro h3 {
   font-weight: 400;
   text-align: center;
 }
 
-/* line 28, ../../../components/sass/modules/_intro.scss */
+/* line 21, ../../../components/sass/modules/_intro.scss */
 .social {
   display: table;
   text-align: center;
   margin: 30px auto 0;
 }
-/* line 33, ../../../components/sass/modules/_intro.scss */
+/* line 26, ../../../components/sass/modules/_intro.scss */
 .social li {
   display: table-cell;
   padding: 20px;
 }
-/* line 37, ../../../components/sass/modules/_intro.scss */
+/* line 30, ../../../components/sass/modules/_intro.scss */
 .social li a {
   border-bottom: none;
 }
-/* line 39, ../../../components/sass/modules/_intro.scss */
+/* line 32, ../../../components/sass/modules/_intro.scss */
 .social li a:hover {
   background-color: transparent;
   opacity: 0.5;
 }
 
-/* line 47, ../../../components/sass/modules/_intro.scss */
+/* line 42, ../../../components/sass/modules/_intro.scss */
 .icon {
   width: 26px;
   height: 28px;
 }
 
-/* line 52, ../../../components/sass/modules/_intro.scss */
+/* line 46, ../../../components/sass/modules/_intro.scss */
+.icon-footer {
+  width: 24px;
+  height: 24px;
+}
+
+/* line 51, ../../../components/sass/modules/_intro.scss */
 #icon-facebook {
   fill: #214285;
 }
 
-/* line 55, ../../../components/sass/modules/_intro.scss */
+/* line 54, ../../../components/sass/modules/_intro.scss */
 #icon-twitter {
   fill: #1EA7E5;
+}
+
+/* line 57, ../../../components/sass/modules/_intro.scss */
+#icon-heart {
+  fill: red;
+}
+
+/* line 1, ../../../components/sass/modules/_footer.scss */
+footer {
+  text-align: right;
+  padding-top: 10px;
 }

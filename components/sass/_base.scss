@@ -87,10 +87,13 @@ button {
 .container {
 	@extend %group;
 	margin: 0 auto;
-	@include toRem(max-width, 960);
 	max-width: 1200px;
 	padding: 0 0.625rem;
 } // container
+
+header > .container, footer > .container {
+	max-width: $l-netbook;
+}
 
 %group:after {
 	content: "";

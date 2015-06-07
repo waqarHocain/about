@@ -2,22 +2,15 @@
 	background-color: $c-lGray;
 	position: relative;
 	min-height: 400px;
-	height: 89.5vh;
+	height: 82vh;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	/*section {
-		position: absolute;
-		top: 50%;
-		margin-top: -1.4em;
-		left: 50%;
-		margin-left: -50%;
-
-		@media screen and (max-width: $l-tablet) {
-			margin-left: -50%
-		}*/
+	@media screen and (max-width: $l-mobile) {
+		height: auto;
+	}
 
 	h3 {
 		font-weight: $f-normal;
@@ -44,9 +37,15 @@
 	} // li
 }
 
+// Icons _-_-_-_-_-_-_-_-_-_-_-_-_-_-<
+
 .icon {
 	width: 26px;
 	height: 28px;
+}
+.icon-footer {
+	width: 24px;
+	height: 24px;
 }
 
 #icon-facebook {
@@ -54,4 +53,7 @@
 }
 #icon-twitter {
 	fill: $c-twitter;
+}
+#icon-heart {
+	fill: red;
 }
