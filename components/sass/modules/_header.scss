@@ -1,10 +1,20 @@
 #logo {
 	float: left;
+	line-height: 0.9;
+	a {
+		border-bottom: none;
+	}
+
+	@media screen and (max-width: $l-tablet) {
+		float: none;
+		text-align: center;
+	}
 }
+
 nav {
 	float: right;
 	display: inline-block;
-	margin-top: 1.5625rem;
+	margin-top: 50px;
 
 	ul {
 		@extend %group;
@@ -39,14 +49,16 @@ nav {
 				&:hover:before, &:focus:before {
 					transform: scaleX(1);
 					opacity: 1;
-				}
+				} 
 			} // a
 		} // li
 	} // ul
 	@media screen and (max-width: $l-tablet) {
 			float: none;
-			max-width: 100%;
-			margin-top: 10px;
+			width: 110px;
+			display: block;
+			//max-width: 50%;
+			margin: 0 auto;
 
 		ul {
 			li {
@@ -59,3 +71,13 @@ nav {
 	} // @media for nav for mobiles
 
 } // nav
+.home #home a, .blog #blog a {
+	color: $c-blue;
+	transition: all 0.3s;
+	&:hover, &:focus {
+		color: $c-gray;
+	}
+	&:before {
+		transform: scaleX(1);
+	}
+}

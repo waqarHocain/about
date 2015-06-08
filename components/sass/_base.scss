@@ -91,9 +91,6 @@ button {
 	padding: 0 0.625rem;
 } // container
 
-header > .container, footer > .container {
-	max-width: $l-netbook;
-}
 
 %group:after {
 	content: "";

@@ -204,12 +204,7 @@ button:visited {
   padding: 0 0.625rem;
 }
 
-/* line 94, ../../../components/sass/_base.scss */
-header > .container, footer > .container {
-  max-width: 1440px;
-}
-
-/* line 98, ../../../components/sass/_base.scss */
+/* line 95, ../../../components/sass/_base.scss */
 .container:after, nav ul:after {
   content: "";
   display: block;
@@ -219,23 +214,35 @@ header > .container, footer > .container {
 /* line 1, ../../../components/sass/modules/_header.scss */
 #logo {
   float: left;
+  line-height: 0.9;
+}
+/* line 4, ../../../components/sass/modules/_header.scss */
+#logo a {
+  border-bottom: none;
+}
+@media screen and (max-width: 768px) {
+  /* line 1, ../../../components/sass/modules/_header.scss */
+  #logo {
+    float: none;
+    text-align: center;
+  }
 }
 
-/* line 4, ../../../components/sass/modules/_header.scss */
+/* line 14, ../../../components/sass/modules/_header.scss */
 nav {
   float: right;
   display: inline-block;
-  margin-top: 1.5625rem;
+  margin-top: 50px;
 }
-/* line 11, ../../../components/sass/modules/_header.scss */
+/* line 21, ../../../components/sass/modules/_header.scss */
 nav ul li {
   float: left;
 }
-/* line 14, ../../../components/sass/modules/_header.scss */
+/* line 24, ../../../components/sass/modules/_header.scss */
 nav ul li:last-child a {
   margin-right: 0;
 }
-/* line 18, ../../../components/sass/modules/_header.scss */
+/* line 28, ../../../components/sass/modules/_header.scss */
 nav ul li a {
   color: #9e9ea6;
   border: none;
@@ -244,7 +251,7 @@ nav ul li a {
   margin-right: 1.875rem;
   position: relative;
 }
-/* line 25, ../../../components/sass/modules/_header.scss */
+/* line 35, ../../../components/sass/modules/_header.scss */
 nav ul li a:before {
   content: "";
   position: absolute;
@@ -258,23 +265,38 @@ nav ul li a:before {
   transform: scaleX(0.1);
   transition: opacity, transform 0.3s;
 }
-/* line 39, ../../../components/sass/modules/_header.scss */
+/* line 49, ../../../components/sass/modules/_header.scss */
 nav ul li a:hover:before, nav ul li a:focus:before {
   transform: scaleX(1);
   opacity: 1;
 }
 @media screen and (max-width: 768px) {
-  /* line 4, ../../../components/sass/modules/_header.scss */
+  /* line 14, ../../../components/sass/modules/_header.scss */
   nav {
     float: none;
-    max-width: 100%;
-    margin-top: 10px;
+    width: 110px;
+    display: block;
+    margin: 0 auto;
   }
-  /* line 52, ../../../components/sass/modules/_header.scss */
+  /* line 64, ../../../components/sass/modules/_header.scss */
   nav ul li {
     float: none;
     display: inline-block;
   }
+}
+
+/* line 74, ../../../components/sass/modules/_header.scss */
+.home #home a, .blog #blog a {
+  color: #439fe0;
+  transition: all 0.3s;
+}
+/* line 77, ../../../components/sass/modules/_header.scss */
+.home #home a:hover, .home #home a:focus, .blog #blog a:hover, .blog #blog a:focus {
+  color: #9e9ea6;
+}
+/* line 80, ../../../components/sass/modules/_header.scss */
+.home #home a:before, .blog #blog a:before {
+  transform: scaleX(1);
 }
 
 /* line 1, ../../../components/sass/modules/_intro.scss */
@@ -293,56 +315,62 @@ nav ul li a:hover:before, nav ul li a:focus:before {
     height: auto;
   }
 }
-/* line 15, ../../../components/sass/modules/_intro.scss */
+@media screen and (max-width: 768px) {
+  /* line 1, ../../../components/sass/modules/_intro.scss */
+  .intro {
+    height: 75vh;
+  }
+}
+/* line 18, ../../../components/sass/modules/_intro.scss */
 .intro h3 {
   font-weight: 400;
   text-align: center;
 }
 
-/* line 21, ../../../components/sass/modules/_intro.scss */
+/* line 24, ../../../components/sass/modules/_intro.scss */
 .social {
   display: table;
   text-align: center;
   margin: 30px auto 0;
 }
-/* line 26, ../../../components/sass/modules/_intro.scss */
+/* line 29, ../../../components/sass/modules/_intro.scss */
 .social li {
   display: table-cell;
   padding: 20px;
 }
-/* line 30, ../../../components/sass/modules/_intro.scss */
+/* line 33, ../../../components/sass/modules/_intro.scss */
 .social li a {
   border-bottom: none;
 }
-/* line 32, ../../../components/sass/modules/_intro.scss */
-.social li a:hover {
+/* line 35, ../../../components/sass/modules/_intro.scss */
+.social li a:hover, .social li a:focus {
   background-color: transparent;
   opacity: 0.5;
 }
 
-/* line 42, ../../../components/sass/modules/_intro.scss */
+/* line 45, ../../../components/sass/modules/_intro.scss */
 .icon {
   width: 26px;
   height: 28px;
 }
 
-/* line 46, ../../../components/sass/modules/_intro.scss */
+/* line 49, ../../../components/sass/modules/_intro.scss */
 .icon-footer {
   width: 24px;
   height: 24px;
 }
 
-/* line 51, ../../../components/sass/modules/_intro.scss */
+/* line 54, ../../../components/sass/modules/_intro.scss */
 #icon-facebook {
   fill: #214285;
 }
 
-/* line 54, ../../../components/sass/modules/_intro.scss */
+/* line 57, ../../../components/sass/modules/_intro.scss */
 #icon-twitter {
   fill: #1EA7E5;
 }
 
-/* line 57, ../../../components/sass/modules/_intro.scss */
+/* line 60, ../../../components/sass/modules/_intro.scss */
 #icon-heart {
   fill: red;
 }
@@ -351,4 +379,10 @@ nav ul li a:hover:before, nav ul li a:focus:before {
 footer {
   text-align: right;
   padding-top: 10px;
+}
+@media screen and (max-width: 768px) {
+  /* line 1, ../../../components/sass/modules/_footer.scss */
+  footer {
+    text-align: center;
+  }
 }
